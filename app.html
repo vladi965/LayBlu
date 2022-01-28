@@ -17,50 +17,70 @@
 </head>
 
 <body>
-    <header class="header">
-        <nav class="nav">
-            <div class="nav__logo">
-                <img src="/src/img/svg/Vector.svg" alt="">
-                <img src="/src/img/svg/LayBlu UI.svg" alt="">
-            </div>
-
-            <div class="nav__content">
-                <div class="nav__list">
-                    <a href="#" class="nav__item">Documentación</a>
-                    <a href="#" class="nav__item">Componentes</a>
-                    <a href="#" class="nav__item">Blog</a>
-                </div>
-                
-                <div class="nav__icons_theme">
-                    <a class="nav__btn-theme"></a>
-                    <ul class="nav__theme">
-                        <li class="nav__theme-light">Light</li>
-                        <li class="nav__theme-dark">Dark</li>
-                    </ul>
-    
-                </div>
-
+  
+    <!-- start nav -->
+    <nav class="nav">
+        <!-- star logo -->
+        <div class="nav__logo">
+            <img src="src/img/svg/Vector.svg" alt="">
+            <img src="src/img/svg/LayBlu UI.svg" alt="">
+        </div>
+        <!-- end logo -->
+        <!-- start input search -->
+        <div class="nav__search">
+            <i class="fas fa-search nav__icon-search"></i>
+            <input type="text" class="nav__input-search">
+        </div>
+        <!-- end input search -->
+        <!-- start nav content -->
+        <div class="nav__content">
+            <!-- start nav list -->
+            <div class="nav__list">
+                <a href="#" class="nav__item">Documentación</a>
+                <a href="#" class="nav__item">Componentes</a>
+                <a href="#" class="nav__item">Blog</a>
+                <!-- start nav icon -->
                 <div class="nav__content_icon">
-                        <!-- icono -->
-                        <i class="fas fa-sun nav__icon_sun"></i>
-                        <i class="fab fa-github nav__icon_github"></i>
+                    <i class="fas fa-sun nav__icon-sun"></i>
+                    <div class="nav__them-content">
+                        <div class="nav__icons_theme">
+                            <a class="nav__theme-light"><i class="far fa-lightbulb nav__icon-light"></i>Light</a>
+                            <a class="nav__theme-dark"><i class="far fa-moon nav__icon-dark"></i>Dark</a>
+                        </div>
+                    </div>
+                    <i class="fab fa-github nav__icon-github"></i>
                 </div>
-
+                <!-- end nav icon -->
             </div>
-
-        </nav>
-    </header>
-
-    <main>
-        <section>
-
-        </section>
+            <!-- end nav list -->
+        </div>
+        <!-- end nav content -->
+    </nav>
+    <!-- end nav -->
+    
+    <!-- start main -->
+    <main class="main">
+        <!-- start sidebar -->
+        <aside class="sidebar">
+            <ul class="sidebar__list">
+                <li class="sidebar__item"><i class="fas fa-book-open sidebar__book"></i>Documentación</li>
+                <li class="sidebar__item"><i class="fas fa-box sidebar__box"></i>Componentes</li>
+                <li class="sidebar__item"><i class="fas fa-th-large sidebar__resource"></i>Recursos</li>
+                <li class="sidebar__item"><i class="fas fa-comment sidebar__commet"></i>Comunidad</li>
+                <li class="sidebar__spacer">Empezando</li>
+                <li class="sidebar__start-content">
+                    <a class="sidebar__start-item">Instalacion</a>
+                    <a class="sidebar__start-item">Configuracion</a>
+                    <a class="sidebar__start-item">Compatibilidad con navegador</a>
+                </li>
+            </ul>
+        </aside>
+        <!-- end sidebar -->
     </main>
-
-    <footer>
-
-    </footer>
+    <!-- end main -->
 
 </body>
 
 </html>
+
+
