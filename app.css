@@ -1,2 +1,9 @@
 /* BASE MAIN */
+@import url("src/css/base/normalize.css");
 @import url("src/css/base/reset.css");
+
+/* PAGES */
+@import url("src/css/pages/home.css");
+
+/* VARIABLES */
+@import url("src/css/variables/v-color.css")
