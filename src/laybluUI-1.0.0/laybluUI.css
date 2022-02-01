@@ -1,0 +1,416 @@
+/* 
+ * Layblue v1.0.0
+ * Copyright 2022 The Layblue Authors
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root{
+
+    --primary__50:#E0E9F6;
+    --primary__100:#A8C4EE;
+    --primary__200:#6E9DE3;
+    --primary__300:#598FDF;
+    --primary__400:#4581DB;
+    --primary__500:#3073D7;
+    --primary__600:#2B68C2;
+    --primary__700:#265CAC;
+    --primary__800:#225197;
+    --primary__900:#1D4581;
+
+    --secondary__50:#AAAAAA;
+    --secondary__100:#999999;
+    --secondary__200:#888888;
+    --secondary__300:#777777;
+    --secondary__400:#666666;
+    --secondary__500:#555555;
+    --secondary__600:#4A4A4A;
+    --secondary__700:#444444;
+    --secondary__800:#3A3A3A;
+    --secondary__900:#333333;
+
+    --success__50:#EDF7EE;
+    --success__100:#DBEFDC;
+    --success__200:#B7DFB9;
+    --success__300:#94CF96;
+    --success__400:#70BF73;
+    --success__500:#4CAF50;
+    --success__600:#449E48;
+    --success__700:#3D8C40;
+    --success__800:#357A38;
+    --success__900:#2E6930;
+
+    --warning__50:#FEF8EC;
+    --warning__100:#FCF0D9;
+    --warning__200:#F9E2B3;
+    --warning__300:#F6D38E;
+    --warning__400:#F3C568;
+    --warning__500:#F0B642;
+    --warning__600:#D8A43B;
+    --warning__700:#C09235;
+    --warning__800:#A87F2E;
+    --warning__900:#906D28;
+
+    --danger__50:#FDEDED;
+    --danger__100:#FBDADA;
+    --danger__200:#F7B6B6;
+    --danger__300:#F39191;
+    --danger__400:#EF6D6D;
+    --danger__500:#EB4848;
+    --danger__600:#D44141;
+    --danger__700:#BC3A3A;
+    --danger__800:#A53232;
+    --danger__900:#8D2B2B;
+
+    --info__50:#ECF9FC;
+    --info__100:#D8F3F8;
+    --info__200:#B1E7F1;
+    --info__300:#8ADAEB;
+    --info__400:#63CEE4;
+    --info__500:#3CC2DD;
+    --info__600:#36AFC7;
+    --info__700:#309BB1;
+    --info__800:#2A889B;
+    --info__900:#247485;
+
+    --light__50:#FCFCFC;
+    --light__100:#FCFCFC;
+    --light__200:#F9F9F9;
+    --light__300:#F2F2F2;
+    --light__400:#EFEFEF;
+    --light__500:#ECECEC;
+    --light__600:#E9E9E9;
+    --light__700:#E5E5E5;
+    --light__800:#E2E2E2;
+    --light__900:#DFDFDF;
+
+    --dark__50:#AAAAAA;
+    --dark__100:#999999;
+    --dark__200:#888888;
+    --dark__300:#777777;
+    --dark__400:#666666;
+    --dark__500:#555555;
+    --dark__600:#4A4A4A;
+    --dark__700:#444444;
+    --dark__800:#3A3A3A;
+    --dark__900:#333333;
+
+    --font__head: system-ui, serif;
+    --font__ubuntu:'Ubuntu', sans-serif;
+    --font__IBM-plex: 'IBM Plex Sans', sans-serif;
+
+}
+
+*::before,
+::after{ box-sizing: border-box; }
+
+html{
+    font-family: sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: 100%;
+}
+
+article, aside, footer, header, main, nav, section{ display: block; }
+
+body{ 
+    margin: 0;
+    padding: 0;
+    font-family: var(--font__head);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--dark__900);
+    background-color: var(--light__50);
+    text-align: left;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+a{ background-color: transparent; }
+
+svg{
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+img{
+    border-style: none;
+    vertical-align: middle;
+}
+
+.h1,.h2,.h3,.h4,.h5,.h6,
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-family: var(--font__ubuntu);
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-family: var(--font__IBM-plex);
+}
+
+/* 
+    * Titulo: tamaño de tipografia
+*/
+
+h1,.h1{ 
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(2.4rem, 4.737vw, 3.6rem);
+    line-height: 4.68rem;
+}
+
+h2,.h2{ 
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(2rem, 3.684vw, 2.8rem);
+    line-height: 3.64rem;
+}
+
+h3,.h3{ 
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(1.6rem, 2.667vw, 2rem); 
+    line-height: 2.6rem;
+}
+
+h4,.h4{ 
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(1.4rem, 2.133vw, 1.6rem);
+    line-height: 2.08rem;
+}
+
+h5,.h5{ 
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(1.4rem, 1.867vw, 1.4rem);
+    line-height: 2.08rem;
+}
+
+h6,.h6{ 
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(1.3rem, 1.733vw, 1.3rem);
+    line-height: 2.08rem;
+}
+
+
+.lay__text-lg{
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(1.6rem, 2.632vw, 2rem);
+    line-height: 3.2rem;
+}
+
+.lay__text-md{
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(1.4rem, 2.105vw, 1.6rem);
+    line-height: 2.56rem;
+}
+
+.lay__text-sm{
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(1.2rem, 1.842vw, 1.4rem);
+    line-height: 2.24rem;
+}
+
+.lay__text-xs{
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(1.1rem, 1.711vw, 1.3rem);
+    line-height: 2.08rem;
+}
+
+/* 
+    * Titulo: textos y fondos de colores
+*/
+
+.lay__text-primary{ background-color: var(--primary__500)!important; }
+.lay__text-secondary{ background-color: var(--secondary__500)!important; }
+.lay__text-success{ background-color: var(--success__500)!important; }
+.lay__text-warning{ background-color: var(--warning__500)!important; }
+.lay__text-danger{ background-color: var(--danger__500)!important; }
+.lay__text-info{ background-color: var(--info__500)!important; }
+.lay__text-light{ background-color: var(--light__500)!important; }
+.lay__text-dark{ background-color: var(--dark__500)!important; }
+
+.lay__bg-primary{ background-color: var(--primary__500)!important; }
+.lay__bg-secondary{ background-color: var(--secondary__500)!important; }
+.lay__bg-success{ background-color: var(--success__500)!important; }
+.lay__bg-warning{ background-color: var(--warning__500)!important; }
+.lay__bg-danger{ background-color: var(--danger__500)!important; }
+.lay__bg-info{ background-color: var(--info__500)!important; }
+.lay__bg-light{ background-color: var(--light__500)!important; }
+.lay__bg-dark{ background-color: var(--dark__500)!important; }
+
+/* 
+    * Titulo: iconos
+    ? Pendiente: el manejo de tamaño y colores de los iconos en el viewport
+*/
+
+.lay__icon{
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    margin-left: .3em;
+    margin-right: .3em;
+}
+
+.lay__icon--dashboard::before{ content: url("../img/svgs/dashboard.svg"); }
+.lay__icon--colors::before{ content: url("../img/svgs/colors.svg"); }
+.lay__icon--pencil::before{ content: url("../img/svgs/tipografy.svg"); }
+.lay__icon--star::before{ content: url("../img/svgs/icon.svg"); }
+.lay__icon--grid::before{ content: url("../img/svgs/grid.svg"); }
+.lay__icon--notice::before{ content: url("../img/svgs/notification.svg"); }
+.lay__icon--user::before{ content: url("../img/svgs/user-client.svg"); }
+.lay__icon--comment::before{ content: url("../img/svgs/comment.svg"); }
+.lay__icon--search::before{ content: url("../img/svgs/search.svg"); }
+.lay__icon--nav::before{ content: url("../img/svgs/navigation-menu.svg"); }
+.lay__icon--users::before{ content: url("../img/svgs/user-clients.svg"); }
+.lay__icon--send::before{ content: url("../img/svgs/navigation.svg"); }
+.lay__icon--layout::before{ content: url("../img/svgs/layout.svg"); }
+.lay__icon--form::before{ content: url("../img/svgs/form.svg"); }
+.lay__icon--chart::before{ content: url("../img/svgs/chart.svg"); }
+.lay__icon--minus::before{ content: url("../img/svgs/minus.svg"); }
+
+/* 
+    *Titulo: layout - container - display 
+*/
+
+.lay__container,
+.lay__container--lg,
+.lay__container--md,
+.lay__container--sm{ 
+    width: 100%;
+    margin: 0em 1.5em 0em 1.5em;
+    padding: 0em auto 0em auto; 
+}
+
+@media (min-width:340px){
+    .lay__container--sm, .lay__container{
+        max-width: 540px;
+    }
+}
+@media (min-width:760px){
+    .lay__container--md, .lay__container--sm, .lay__container{
+        max-width: 720px;
+    }
+}
+@media (min-width: 1020px){
+    .lay__container--lg, 
+    .lay__container--md, 
+    .lay__container--sm, 
+    .lay__container{ max-width: 960px; }
+}
+@media (min-width: 1200px){
+    .lay__container--lg, 
+    .lay__container--md, 
+    .lay__container--sm, 
+    .lay__container{ max-width: 1140px; }
+}
+@media (min-width: 1500px){
+    .lay__container--lg, 
+    .lay__container--md, 
+    .lay__container--sm, 
+    .lay__container{ max-width: 1320px; }
+}
+
+.lay__d-block{ display: block; }
+.lay__d-ilne-block{ display: inline-block; }
+.lay__d-ilne{ display: inline; }
+.lay__d-flex{ display: flex; }
+.lay__d-ilne-flex{ display: inline-flex; }
+.lay__d-grid{ display: grid; }
+.lay__d-ilne-grid{ display: inline-grid; }
+.lay__d-none{ display: none; }
+
+/* 
+    *Titulo: flex & Grid - sistema de columnas
+*/
+
+.lay__flex-row{ flex-direction: row; }
+.lay__flex-row-revers{ flex-direction: row-reverse; }
+.lay__flex-col{ flex-direction: column; }
+.lay__flex-col-revers{ flex-direction: column-reverse; }
+
+.lay__flex-wrap{flex-wrap: wrap; }
+.lay__flex-wrap-revers{flex-wrap: wrap-reverse; }
+.lay__flex-wrap-nwrap{flex-wrap: nowrap; }
+
+.lay__col-1{ grid-template-columns: repeat(1fr, minmax(0, 1fr)); }
+.lay__col-2{ grid-template-columns: repeat(2fr, minmax(0, 1fr)); }
+.lay__col-3{ grid-template-columns: repeat(3fr, minmax(0, 1fr)); }
+.lay__col-4{ grid-template-columns: repeat(4fr, minmax(0, 1fr)); }
+.lay__col-5{ grid-template-columns: repeat(5fr, minmax(0, 1fr)); }
+.lay__col-6{ grid-template-columns: repeat(6fr, minmax(0, 1fr)); }
+.lay__col-7{ grid-template-columns: repeat(7fr, minmax(0, 1fr)); }
+.lay__col-8{ grid-template-columns: repeat(8fr, minmax(0, 1fr)); }
+.lay__col-9{ grid-template-columns: repeat(9fr, minmax(0, 1fr)); }
+.lay__col-10{ grid-template-columns: repeat(10fr, minmax(0, 1fr)); }
+.lay__col-11{ grid-template-columns: repeat(11fr, minmax(0, 1fr)); }
+.lay__col-12{ grid-template-columns: repeat(12fr, minmax(0, 1fr)); }
+
+@media (min-width: 340px){
+    .lay__col-md-1{ grid-template-columns: repeat(1fr, minmax(0, 1fr)); }
+    .lay__col-md-2{ grid-template-columns: repeat(2fr, minmax(0, 1fr)); }
+    .lay__col-md-3{ grid-template-columns: repeat(3fr, minmax(0, 1fr)); }
+    .lay__col-md-4{ grid-template-columns: repeat(4fr, minmax(0, 1fr)); }
+    .lay__col-md-5{ grid-template-columns: repeat(5fr, minmax(0, 1fr)); }
+    .lay__col-md-6{ grid-template-columns: repeat(6fr, minmax(0, 1fr)); }
+    .lay__col-md-7{ grid-template-columns: repeat(7fr, minmax(0, 1fr)); }
+    .lay__col-md-8{ grid-template-columns: repeat(8fr, minmax(0, 1fr)); }
+    .lay__col-md-9{ grid-template-columns: repeat(9fr, minmax(0, 1fr)); }
+    .lay__col-md-10{ grid-template-columns: repeat(10fr, minmax(0, 1fr)); }
+    .lay__col-md-11{ grid-template-columns: repeat(11fr, minmax(0, 1fr)); }
+    .lay__col-md-12{ grid-template-columns: repeat(12fr, minmax(0, 1fr)); }
+}
+
+/* 
+    *Titulo: identidad del framework - logos
+    ? Pendiente: el manejo de tamaño y colores de las marcas en el viewport
+*/
+
+.lay__brand{
+    width: 120px;
+    height: 120px;
+}
+
+/* 
+    * Titulo: avatar
+    ? Pendiente: revisar los margenes de los avatares - en espera de testeo
+*/
+
+.avatar{
+    display: inline-block;
+    width: 6em;
+    height: 6em;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0.5em;
+    margin-left: 1em;
+}
+
+.avatar--r{ border-radius: 100%; }
+
+.avatar--md{
+    width: 5em;
+    height: 5em;
+}
+
+.avatar--sm{
+    width: 4em;
+    height: 4em;
+}
