@@ -234,14 +234,14 @@ h6,.h6{
     * Titulo: textos y fondos de colores
 */
 
-.lay__text-primary{ background-color: var(--primary__500)!important; }
-.lay__text-secondary{ background-color: var(--secondary__500)!important; }
-.lay__text-success{ background-color: var(--success__500)!important; }
-.lay__text-warning{ background-color: var(--warning__500)!important; }
-.lay__text-danger{ background-color: var(--danger__500)!important; }
-.lay__text-info{ background-color: var(--info__500)!important; }
-.lay__text-light{ background-color: var(--light__500)!important; }
-.lay__text-dark{ background-color: var(--dark__500)!important; }
+.lay__text-primary{ color: var(--primary__500)!important; }
+.lay__text-secondary{ color: var(--secondary__500)!important; }
+.lay__text-success{ color: var(--success__500)!important; }
+.lay__text-warning{ color: var(--warning__500)!important; }
+.lay__text-danger{ color: var(--danger__500)!important; }
+.lay__text-info{ color: var(--info__500)!important; }
+.lay__text-light{ color: var(--light__500)!important; }
+.lay__text-dark{ color: var(--dark__500)!important; }
 
 .lay__bg-primary{ background-color: var(--primary__500)!important; }
 .lay__bg-secondary{ background-color: var(--secondary__500)!important; }
@@ -267,6 +267,9 @@ h6,.h6{
     line-height: 1;
     margin-left: .3em;
     margin-right: .3em;
+    width: 40px !important; 
+    height: 40px!important;
+  
 }
 
 .lay__icon--dashboard::before{ content: url("../img/svgs/dashboard.svg"); }
