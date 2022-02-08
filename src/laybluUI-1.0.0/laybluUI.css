@@ -106,18 +106,20 @@
 ::after{ box-sizing: border-box; }
 
 html{
-    font-family: sans-serif;
+    font-family: var(--font__head);
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-text-size-adjust: 100%;
 }
 
 article, aside, footer, header, main, nav, section{ display: block; }
 
+div{ border-radius: 0.5rem;  padding: 0 0.5em 0 0.5em; }
+
 body{ 
     margin: 0;
     padding: 0;
     font-family: var(--font__head);
-    font-size: 16px;
+    font-size: 10px;
     line-height: 1.5;
     color: var(--dark__900);
     background-color: var(--light__50);
@@ -140,6 +142,17 @@ svg{
 img{
     border-style: none;
     vertical-align: middle;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+}
+
+ol,
+ul {
+  margin-bottom: 0;
 }
 
 .h1,.h2,.h3,.h4,.h5,.h6,
@@ -226,7 +239,7 @@ h6,.h6{
 .lay__text-xs{
     font-style: normal;
     font-weight: 400;
-    font-size: clamp(1.1rem, 1.711vw, 1.3rem);
+    font-size: clamp(1.2rem, 1.711vw, 1.3rem);
     line-height: 2.08rem;
 }
 
@@ -260,18 +273,28 @@ h6,.h6{
 .lay__icon{
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    display: inline-block;
+    display: block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     line-height: 1;
     margin-left: .3em;
     margin-right: .3em;
-    width: 40px !important; 
-    height: 40px!important;
+    width: 1.5rem; 
+    height: 1.5rem;
   
 }
 
+.lay__icon--archive::before{ content: url("../img/svgs/archive.svg"); }
+.lay__icon--btn-bottom-bar::before{ content: url("../img/svgs/arrow-to-bottom-bar.svg"); }
+.lay__icon--btn-bottom::before{ content: url("../img/svgs/arrow-to-bottom.svg"); }
+.lay__icon--btn-left-bar::before{ content: url("../img/svgs/arrow-to-left-bar.svg"); }
+.lay__icon--btn-left::before{ content: url("../img/svgs/arrow-to-left.svg"); }
+.lay__icon--btn-right-bar::before{ content: url("../img/svgs/arrow-to-right-bar.svg"); }
+.lay__icon--btn-right::before{ content: url("../img/svgs/arrow-to-right.svg"); }
+.lay__icon--btn-top-bar::before{ content: url("../img/svgs/arrow-to-top-bar.svg"); }
+.lay__icon--btn-top::before{ content: url("../img/svgs/arrow-to-top.svg"); }
+.lay__icon--badroom::before{ content: url("../img/svgs/badroom.svg"); }
 .lay__icon--dashboard::before{ content: url("../img/svgs/dashboard.svg"); }
 .lay__icon--colors::before{ content: url("../img/svgs/colors.svg"); }
 .lay__icon--pencil::before{ content: url("../img/svgs/tipografy.svg"); }
@@ -288,9 +311,10 @@ h6,.h6{
 .lay__icon--form::before{ content: url("../img/svgs/form.svg"); }
 .lay__icon--chart::before{ content: url("../img/svgs/chart.svg"); }
 .lay__icon--minus::before{ content: url("../img/svgs/minus.svg"); }
-
+.lay__icon--options::before{ content: url("../img/svgs/h-options.svg"); }
 /* 
-    *Titulo: layout - container - display 
+    *Titulo: layout - container - display
+    ? Pendiente: cambiar el padding
 */
 
 .lay__container,
@@ -298,8 +322,9 @@ h6,.h6{
 .lay__container--md,
 .lay__container--sm{ 
     width: 100%;
-    margin: 0em 1.5em 0em 1.5em;
-    padding: 0em auto 0em auto; 
+    margin: 0 auto 1em auto;
+    padding: 1em 1.5em 1em 1.5em;
+    border-radius: 0.5rem
 }
 
 @media (min-width:340px){
@@ -335,13 +360,13 @@ h6,.h6{
 .lay__d-ilne-block{ display: inline-block; }
 .lay__d-ilne{ display: inline; }
 .lay__d-flex{ display: flex; }
+.lay__d-grid_{ display: grid; }
 .lay__d-ilne-flex{ display: inline-flex; }
-.lay__d-grid{ display: grid; }
-.lay__d-ilne-grid{ display: inline-grid; }
 .lay__d-none{ display: none; }
 
 /* 
     *Titulo: flex & Grid - sistema de columnas
+    ? Pendiente: faltan algunas clases
 */
 
 .lay__flex-row{ flex-direction: row; }
@@ -353,33 +378,122 @@ h6,.h6{
 .lay__flex-wrap-revers{flex-wrap: wrap-reverse; }
 .lay__flex-wrap-nwrap{flex-wrap: nowrap; }
 
-.lay__col-1{ grid-template-columns: repeat(1fr, minmax(0, 1fr)); }
-.lay__col-2{ grid-template-columns: repeat(2fr, minmax(0, 1fr)); }
-.lay__col-3{ grid-template-columns: repeat(3fr, minmax(0, 1fr)); }
-.lay__col-4{ grid-template-columns: repeat(4fr, minmax(0, 1fr)); }
-.lay__col-5{ grid-template-columns: repeat(5fr, minmax(0, 1fr)); }
-.lay__col-6{ grid-template-columns: repeat(6fr, minmax(0, 1fr)); }
-.lay__col-7{ grid-template-columns: repeat(7fr, minmax(0, 1fr)); }
-.lay__col-8{ grid-template-columns: repeat(8fr, minmax(0, 1fr)); }
-.lay__col-9{ grid-template-columns: repeat(9fr, minmax(0, 1fr)); }
-.lay__col-10{ grid-template-columns: repeat(10fr, minmax(0, 1fr)); }
-.lay__col-11{ grid-template-columns: repeat(11fr, minmax(0, 1fr)); }
-.lay__col-12{ grid-template-columns: repeat(12fr, minmax(0, 1fr)); }
+/* 
+    * Titulo: sistema de columnas hecha por layblu y tradicional
+*/
 
-@media (min-width: 340px){
-    .lay__col-md-1{ grid-template-columns: repeat(1fr, minmax(0, 1fr)); }
-    .lay__col-md-2{ grid-template-columns: repeat(2fr, minmax(0, 1fr)); }
-    .lay__col-md-3{ grid-template-columns: repeat(3fr, minmax(0, 1fr)); }
-    .lay__col-md-4{ grid-template-columns: repeat(4fr, minmax(0, 1fr)); }
-    .lay__col-md-5{ grid-template-columns: repeat(5fr, minmax(0, 1fr)); }
-    .lay__col-md-6{ grid-template-columns: repeat(6fr, minmax(0, 1fr)); }
-    .lay__col-md-7{ grid-template-columns: repeat(7fr, minmax(0, 1fr)); }
-    .lay__col-md-8{ grid-template-columns: repeat(8fr, minmax(0, 1fr)); }
-    .lay__col-md-9{ grid-template-columns: repeat(9fr, minmax(0, 1fr)); }
-    .lay__col-md-10{ grid-template-columns: repeat(10fr, minmax(0, 1fr)); }
-    .lay__col-md-11{ grid-template-columns: repeat(11fr, minmax(0, 1fr)); }
-    .lay__col-md-12{ grid-template-columns: repeat(12fr, minmax(0, 1fr)); }
+.lay__row{
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-auto-rows: min-content;
+    gap: 0.4rem;
 }
+
+.lay__col-1{grid-column: span 1;}
+.lay__col-2{grid-column: span 2;}
+.lay__col-3{grid-column: span 3;}
+.lay__col-4{grid-column: span 4;}
+.lay__col-5{grid-column: span 5;}
+.lay__col-6{grid-column: span 6;}
+.lay__col-7{grid-column: span 7;}
+.lay__col-8{grid-column: span 8;}
+.lay__col-9{grid-column: span 9;}
+.lay__col-10{grid-column: span 10;}
+.lay__col-11{grid-column: span 11;}
+.lay__col-12{grid-column: span 12;}
+
+.col-1{ grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.col-1{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.col-1{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.col-1{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.col-1{ grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.col-1{ grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.col-1{ grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.col-1{ grid-template-columns: repeat(8, minmax(0, 1fr)); }
+.col-1{ grid-template-columns: repeat(9, minmax(0, 1fr)); }
+.col-1{ grid-template-columns: repeat(10, minmax(0, 1fr)); }
+.col-1{ grid-template-columns: repeat(11, minmax(0, 1fr)); }
+.col-1{ grid-template-columns: repeat(12, minmax(0, 1fr)); }
+
+@media (max-width: 760px){
+    .lay__col-md-1{grid-column: span 1;}
+    .lay__col-md-2{grid-column: span 2;}
+    .lay__col-md-3{grid-column: span 3;}
+    .lay__col-md-4{grid-column: span 4;}
+    .lay__col-md-5{grid-column: span 5;}
+    .lay__col-md-6{grid-column: span 6;}
+    .lay__col-md-7{grid-column: span 7;}
+    .lay__col-md-8{grid-column: span 8;}
+    .lay__col-md-9{grid-column: span 9;}
+    .lay__col-md-10{grid-column: span 10;}
+    .lay__col-md-11{grid-column: span 11;}
+    .lay__col-md-12{grid-column: span 12;}
+
+    .col-md-1{ grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .col-md-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .col-md-3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .col-md-4{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .col-md-5{ grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .col-md-6{ grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .col-md-7{ grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    .col-md-8{ grid-template-columns: repeat(8, minmax(0, 1fr)); }
+    .col-md-9{ grid-template-columns: repeat(9, minmax(0, 1fr)); }
+    .col-md-10{ grid-template-columns: repeat(10, minmax(0, 1fr)); }
+    .col-md-11{ grid-template-columns: repeat(11, minmax(0, 1fr)); }
+    .col-md-12{ grid-template-columns: repeat(12, minmax(0, 1fr)); }
+}
+
+@media (max-width: 576px){
+    .lay__col-sm-1{grid-column: span 1;}
+    .lay__col-sm-2{grid-column: span 2;}
+    .lay__col-sm-3{grid-column: span 3;}
+    .lay__col-sm-4{grid-column: span 4;}
+    .lay__col-sm-5{grid-column: span 5;}
+    .lay__col-sm-6{grid-column: span 6;}
+    .lay__col-sm-7{grid-column: span 7;}
+    .lay__col-sm-8{grid-column: span 8;}
+    .lay__col-sm-9{grid-column: span 9;}
+    .lay__col-sm-10{grid-column: span 10;}
+    .lay__col-sm-11{grid-column: span 11;}
+    .lay__col-sm-12{grid-column: span 12;}
+
+    .col-sm-1{ grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .col-sm-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .col-sm-3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .col-sm-4{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .col-sm-5{ grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .col-sm-6{ grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .col-sm-7{ grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    .col-sm-8{ grid-template-columns: repeat(8, minmax(0, 1fr)); }
+    .col-sm-9{ grid-template-columns: repeat(9, minmax(0, 1fr)); }
+    .col-sm-10{ grid-template-columns: repeat(10, minmax(0, 1fr)); }
+    .col-sm-11{ grid-template-columns: repeat(11, minmax(0, 1fr)); }
+    .col-sm-12{ grid-template-columns: repeat(12, minmax(0, 1fr)); }
+}
+
+.lay__gap-1{ gap: 0.1rem; }
+.lay__gap-2{ gap: 0.2rem; }
+.lay__gap-3{ gap: 0.3rem; }
+.lay__gap-4{ gap: 0.4rem; }
+.lay__gap-5{ gap: 0.5rem; }
+.lay__gap-6{ gap: 0.6rem; }
+.lay__gap-7{ gap: 0.7rem; }
+.lay__gap-8{ gap: 0.8rem; }
+.lay__gap-9{ gap: 0.9rem; }
+.lay__gap-10{ gap: 1rem; }
+
+.lay__c-start{ justify-content: flex-start; }
+.lay__c-end{ justify-content: flex-end; }
+.lay__c-center{ justify-content: center; }
+.lay__c-between{ justify-content: space-between; }
+.lay__c-around{ justify-content: space-around; }
+.lay__c-evenly{ justify-content: space-evenly; }
+
+.lay__i-start{ justify-items: start; }
+.lay__i-end{ justify-items: end;}
+.lay__i-center{ justify-items: center; }
+.lay__i-stretch{ justify-items: stretch; }
+
 
 /* 
     *Titulo: identidad del framework - logos
@@ -416,4 +530,79 @@ h6,.h6{
 .avatar--sm{
     width: 4em;
     height: 4em;
+}
+
+/* 
+    * Titulo: breadcrums
+    ? la clase breadcrums--content-active activa la caja content, falta cambio de colores en iconos
+*/
+
+.breadcrums{ 
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 2.56rem;
+    text-align: center;
+}
+
+.breadcrums--item{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    color: var(--primary__100);
+    text-transform: lowercase;
+    text-overflow: ellipsis;
+}
+.breadcrums--item:hover{ text-decoration: underline; }
+
+.breadcrums--item:not(:last-of-type)::after{
+    display: inline;
+    width: .800em;
+    content: url("../img/svgs/chevron-right.svg");
+    margin: 0 0.5em;  
+}
+
+.breadcrums--content{
+    position: absolute;
+    z-index: 100;
+    width: auto;
+    height: 0;
+    overflow: hidden;
+    top: 0;
+    margin-top: 2em;
+    padding: 0 0.5em;
+    background-color: var(--light__100);
+    border-radius: 0.5rem;
+}
+.breadcrums--content-active{ height: auto; }
+
+.breadcrums--list{
+    padding: 0 0.5em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.breadcrums--link{
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--primary__500);
+    cursor: pointer;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.breadcrums--active{ color: var(--primary__500); }
+
+[attr="hover"]:hover{
+    color: var(--primary__500);
+    transition: all 100ms ease-in-out;
 }

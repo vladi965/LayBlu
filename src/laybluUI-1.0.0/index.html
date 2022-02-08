@@ -11,34 +11,13 @@
     <!-- styles of components -->
     <link rel="stylesheet" href="laybluUI.css">
     <style>
+        /* clases personalizadas */
+
         .main{
             width: 100%;
             height: 100vh;
         }
-        .main__container{
-            width: 70%;
-            padding-top: 1.5em;
-            padding-bottom: 1.5em;
-            padding-right: 1.5em;
-            padding-left: 1.5em;
-            margin-top: 1.5em;
-            margin-right: auto;
-            margin-left: auto;
-            background-color: #0C2239;
-            border-radius: 5px;
-            color: #fff;
-        }
 
-        .main__container--row{
-            display: flex;
-            flex-direction: row;
-        }
-
-        .main__container--col{
-            display: flex;
-            flex-direction: column;
-        }
-        
         .main__box{
             width: 50px;
             height: 50px;
@@ -46,12 +25,17 @@
             margin: 1rem;
             border-radius: 100%;
         }
+
+        .blu{ 
+            background-color: #0C2239; 
+        }
+        
     </style>
 </head>
 <body>
     <main class="main">
        
-        <div class="main__container main__container--row">
+        <div class="lay__container lay__d-flex lay__flex-row blu">
             <a class="main__box lay__bg-primary"></a>
             <a class="main__box lay__bg-secondary"></a>
             <a class="main__box lay__bg-success"></a>
@@ -62,7 +46,7 @@
             <a class="main__box lay__bg-dark"></a>
         </div>
 
-        <div class="main__container main__container--col">
+        <div class="lay__container lay__d-flex lay__flex-col lay__text-light blu">
             <h1>h1 - bold - 36px</h1>
             <h2>h2 - regular - 28px</h2>
             <h3>h3 - regular 16px</h3>
@@ -73,10 +57,10 @@
             <p class="lay__text-md">text-md/regular/16</p>
             <p class="lay__text-sm">text-sm/regular/14px</p>
             <p class="lay__text-xs">text-xs/light/13</p>
-            <p>text/normal/16px</p>
+            <p>text/normal/10px</p>
         </div>
 
-        <div class="main__container main__container--row lay__bg-light">
+        <div class="lay__container lay__d-flex lay__flex-row lay__bg-light">
             <i class="lay__icon lay__icon--dashboard"></i>
             <i class="lay__icon lay__icon--colors"></i>
             <i class="lay__icon lay__icon--pencil"></i>
@@ -93,14 +77,15 @@
             <i class="lay__icon lay__icon--form"></i>
             <i class="lay__icon lay__icon--chart"></i>
             <i class="lay__icon lay__icon--minus"></i> 
+            <i class="lay__icon lay__icon--options"></i> 
         </div>
 
-        <div class="main__container main__container--row lay__bg-light">
+        <div class="lay__container lay__d-flex lay__flex-row lay__bg-light">
             <img src="../img/logos/Brand.svg" class="lay__brand">
             <img src="../img/logos/Logo.svg" class="lay__brand">
         </div>
 
-        <div class="main__container main__container--row">
+        <div class="lay__container lay__d-flex lay__flex-row blu">
             <img src="../img/logos/avatar.jpg" class="avatar" alt="avatar">
             <img src="../img/logos/avatar.jpg" class="avatar avatar--md" alt="avatar">
             <img src="../img/logos/avatar.jpg" class="avatar avatar--sm" alt="avatar">
@@ -108,6 +93,63 @@
             <img src="../img/logos/avatar.jpg" class="avatar avatar--r" alt="avatar">
             <img src="../img/logos/avatar.jpg" class="avatar avatar--r avatar--md" alt="avatar">
             <img src="../img/logos/avatar.jpg" class="avatar avatar--r avatar--sm" alt="avatar">
+        </div>
+
+        <div class="lay__container blu">
+            <div class="lay__row">
+                <div class="lay__bg-danger lay__col-1 lay__col-md-6 lay__col-sm-12 lay__text-sm lay__text-light">col-1</div>
+                <div class="lay__bg-danger lay__col-1 lay__col-md-6 lay__col-sm-12 lay__text-sm lay__text-light">col-2</div>
+                <div class="lay__bg-danger lay__col-1 lay__col-md-6 lay__col-sm-12 lay__text-sm lay__text-light">col-3</div>
+                <div class="lay__bg-danger lay__col-1 lay__col-md-6 lay__col-sm-12 lay__text-sm lay__text-light">col-4</div>
+                <div class="lay__bg-danger lay__col-1 lay__col-md-6 lay__col-sm-12 lay__text-sm lay__text-light">col-5</div>
+                <div class="lay__bg-danger lay__col-1 lay__col-md-6 lay__col-sm-12 lay__text-sm lay__text-light">col-6</div>
+                <div class="lay__bg-danger lay__col-1 lay__col-md-6 lay__col-sm-12 lay__text-sm lay__text-light">col-7</div>
+                <div class="lay__bg-danger lay__col-1 lay__col-md-6 lay__col-sm-12 lay__text-sm lay__text-light">col-8</div>
+                <div class="lay__bg-danger lay__col-1 lay__col-md-6 lay__col-sm-12 lay__text-sm lay__text-light">col-9</div>
+                <div class="lay__bg-danger lay__col-1 lay__col-md-6 lay__col-sm-12 lay__text-sm lay__text-light">col-10</div>
+                <div class="lay__bg-danger lay__col-1 lay__col-md-6 lay__col-sm-12 lay__text-sm lay__text-light">col-11</div>
+                <div class="lay__bg-danger lay__col-1 lay__col-md-6 lay__col-sm-12 lay__text-sm lay__text-light">col-12</div>
+                <div class="lay__bg-danger lay__col-6 lay__col-md-6 lay__col-sm-12 lay__text-sm lay__text-light">col-6</div>
+                <div class="lay__bg-danger lay__col-6 lay__col-md-6 lay__col-sm-12 lay__text-sm lay__text-light">col-6</div>
+                <div class="lay__bg-danger lay__col-4 lay__col-md-6 lay__col-sm-12 lay__text-sm lay__text-light">col-4</div>
+                <div class="lay__bg-danger lay__col-4 lay__col-md-6 lay__col-sm-12 lay__text-sm lay__text-light">col-4</div>
+                <div class="lay__bg-danger lay__col-4 lay__col-md-6 lay__col-sm-12 lay__text-sm lay__text-light">col-4</div>
+                <div class="lay__bg-danger lay__col-8 lay__col-md-6 lay__col-sm-12 lay__text-sm lay__text-light">col-8</div>
+                <div class="lay__bg-danger lay__col-4 lay__col-md-6 lay__col-sm-12 lay__text-sm lay__text-light">col-4</div>
+                <div class="lay__bg-danger lay__col-12 lay__col-md-6 lay__col-sm-12 lay__text-sm lay__text-light">col-12</div>
+            </div>
+        </div>
+
+
+        <div class="lay__container lay__bg-light">
+            <div class="lay__d-flex lay__flex-col">
+                <ol class="breadcrums">
+                    <li class="breadcrums--item"><a href=""><i class="lay__icon lay__icon--dashboard"></i></a></li>
+                    <li class="breadcrums--item"><i class="lay__icon lay__icon--options"></i> 
+                        <ul class="breadcrums--content">
+                            <li class="breadcrums--list">
+                                <a href="" class="breadcrums--link">Home</a>
+                                <a href="" class="breadcrums--link">dashboard</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="breadcrums--item breadcrums--active">Solidos</li>
+                </ol>
+                <br>
+                <ol class="breadcrums">
+                    <li class="breadcrums--item"><a href=""><i class="lay__icon lay__icon--dashboard"></i></a></li>
+                    <li class="breadcrums--item">Componentes</li>
+                    <li class="breadcrums--item">Botones</li>
+                    <li class="breadcrums--item breadcrums--active">Solidos</li>
+                </ol>
+                <br>    
+                <ol class="breadcrums">
+                    <li class="breadcrums--item"><a href=""><i class="lay__icon lay__icon--dashboard"></i></a></li>
+                    <li class="breadcrums--item" attr="hover">Componentes</li>
+                    <li class="breadcrums--item" attr="hover">Botones</li>
+                    <li class="breadcrums--item breadcrums--active" attr="hover">Solidos</li>
+                </ol>
+            </div>
         </div>
 
     </main>
